@@ -1,4 +1,24 @@
+Description:
+
 Given n coins for two players playing a game. 
 Each player can pick at least 1 and at most 5 coins in one turn. 
 The player who picks the last coin loses the game. 
 If they play optimally, which player will win the game?
+
+
+
+Solution:
+
+In order to win, you must be able to leave 1 coin at the table which in turn requires you to leave 7 coins at the table which in turn requires you to be able to leave 13 coins on the table and so on…
+
+similar backtracking will give you a series of winning moves as:
+
+1,7,13,19,25,31,37,43,………….6∗k+1
+
+k≥0,k∈N
+
+So if (Number of coins - 1) is a multiple of 6 , the person who starts the game is looser because other guy by default is within the series.
+
+Otherwise the person who starts the game is winner.
+
+Consider one example. Let no.ofcoins=9 . 9–1=8 is not a multiple of 6 hence the person who starts the game wins the game because the starter can remove 1 coin to achieve 7 which is in the series.
