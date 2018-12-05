@@ -1,0 +1,4 @@
+Given n coins for two players playing a game. 
+Each player can pick at least 1 and at most 5 coins in one turn. 
+The player who picks the last coin loses the game. 
+If they play optimally, which player will win the game?
